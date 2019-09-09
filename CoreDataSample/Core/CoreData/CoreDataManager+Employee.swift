@@ -28,6 +28,7 @@ extension CoreDataManager {
       
       self.saveContext()
       completion?()
+      
     }
     
   }
@@ -68,7 +69,15 @@ extension CoreDataManager {
       self.saveContext()
       completion?()
     }
+    
   }
   
-  
+  func employeeDelete(entity: EmployeeEntity, completion: (() -> Void)? = nil) {
+    context.perform {
+      self.context.delete(entity)
+      self.saveContext()
+      completion?()
+    }
+    
+  }
 }

@@ -11,8 +11,11 @@ import CoreData
 
 extension CoreDataManager {
 
-    func personCreate(name: String, age: Int, completion: (() -> Void)? = nil) {
-        context.perform {
+    func personCreate(name: String,
+                      age: Int,
+                      completion: (() -> Void)? = nil) {
+      
+      context.perform {
             let newPerson = PersonEntity(context: self.context)
             newPerson.name = name
             newPerson.age = Int16(age)
@@ -42,7 +45,9 @@ extension CoreDataManager {
         
     }
     
-    func personUpdate(entity: PersonEntity, name: String, age: Int, completion: (() -> Void)? = nil) {
+    func personUpdate(entity: PersonEntity,
+                      name: String, age: Int,
+                      completion: (() -> Void)? = nil) {
         context.perform {
             entity.name = name
             entity.age = Int16(age)

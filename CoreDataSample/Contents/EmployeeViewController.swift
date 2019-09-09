@@ -74,16 +74,31 @@ extension EmployeeViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension EmployeeViewController: UITableViewDelegate {
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let item = list[indexPath.row]
+  func tableView(_ tableView: UITableView,
+                 didSelectRowAt indexPath: IndexPath) {
+    let entity = list[indexPath.row]
     
     if let employeeComposeVC = UIStoryboard(name: "Main", bundle: nil)
       .instantiateViewController(withIdentifier: "EmployeeComposeViewController") as? EmployeeComposeViewController {
-      employeeComposeVC.selectedEntity = item
-      print(item)
+      employeeComposeVC.selectedEntity = entity
       navigationController?.pushViewController(employeeComposeVC, animated: true)
     }
     
+  }
+  
+  func tableView(_ tableView: UITableView,
+                 commit editingStyle: UITableViewCell.EditingStyle,
+                 forRowAt indexPath: IndexPath) {
+    switch editingStyle {
+    case .delete:
+      let entity = list[indexPath.row]
+      CoreDataManager.shared.employeeDelete(entity: entity) { [weak self] in
+        self?.list.remove(at: indexPath.row)
+        self?.refresh()
+      }
+    default:
+      break
+    }
   }
   
 }

@@ -68,7 +68,7 @@ extension EmployeeComposeViewController {
                                               address: address,
                                               department: department,
                                               salary: salary) {
-                                                self.navigationController?.popViewController(animated: true)
+          self.navigationController?.popViewController(animated: true)
         }
       }
     } else {
