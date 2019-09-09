@@ -66,6 +66,32 @@
 			path = Employee;
 			sourceTree = "<group>";
 		};
+		5C163EA5232632D600B469E4 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				5C2557522324CEE2008CE3F4 /* PersonViewController.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		5C163EA62326345200B469E4 /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				5C25577A232519A0008CE3F4 /* EmployeeViewController.swift */,
+				5C25577E2325637E008CE3F4 /* EmployeeTableViewCell.swift */,
+				5C163EA72326346200B469E4 /* Compose */,
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
+		5C163EA72326346200B469E4 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				5C25577C23256316008CE3F4 /* EmployeeComposeViewController.swift */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
 		5C2557442324CEE2008CE3F4 = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +121,8 @@
 		5C25576A2324E9C7008CE3F4 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				5C2557522324CEE2008CE3F4 /* PersonViewController.swift */,
-				5C25577A232519A0008CE3F4 /* EmployeeViewController.swift */,
-				5C25577E2325637E008CE3F4 /* EmployeeTableViewCell.swift */,
-				5C25577C23256316008CE3F4 /* EmployeeComposeViewController.swift */,
+				5C163EA5232632D600B469E4 /* Person */,
+				5C163EA62326345200B469E4 /* Employee */,
 			);
 			path = Contents;
 			sourceTree = "<group>";

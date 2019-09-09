@@ -31,7 +31,7 @@ class EmployeeTableViewCell: UITableViewCell {
     ageLabel.text = "\(item.age)"
     addressLabel.text = item.address
     departmentLabel.text = item.department
-    salaryLabel.text = "\(item.salary)"
+    salaryLabel.text = "\(item.salary)$"
   }
 
 }
