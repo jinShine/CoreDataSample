@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C163E9C232619C200B469E4 /* CoreDataManager+Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C163E9B232619C200B469E4 /* CoreDataManager+Employee.swift */; };
+		5C163EA323261DC900B469E4 /* EmployeeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C163EA123261DC900B469E4 /* EmployeeEntity+CoreDataClass.swift */; };
+		5C163EA423261DC900B469E4 /* EmployeeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C163EA223261DC900B469E4 /* EmployeeEntity+CoreDataProperties.swift */; };
 		5C2557512324CEE2008CE3F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2557502324CEE2008CE3F4 /* AppDelegate.swift */; };
 		5C2557532324CEE2008CE3F4 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2557522324CEE2008CE3F4 /* PersonViewController.swift */; };
 		5C2557562324CEE2008CE3F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2557542324CEE2008CE3F4 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C163E9B232619C200B469E4 /* CoreDataManager+Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Employee.swift"; sourceTree = "<group>"; };
+		5C163EA123261DC900B469E4 /* EmployeeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5C163EA223261DC900B469E4 /* EmployeeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5C25574D2324CEE2008CE3F4 /* CoreDataSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2557502324CEE2008CE3F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C2557522324CEE2008CE3F4 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C163E962326192600B469E4 /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				5C163EA123261DC900B469E4 /* EmployeeEntity+CoreDataClass.swift */,
+				5C163EA223261DC900B469E4 /* EmployeeEntity+CoreDataProperties.swift */,
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
 		5C2557442324CEE2008CE3F4 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +85,7 @@
 		5C25574F2324CEE2008CE3F4 /* CoreDataSample */ = {
 			isa = PBXGroup;
 			children = (
+				5C25576C2324EA1C008CE3F4 /* Core */,
 				5C25576A2324E9C7008CE3F4 /* Contents */,
 				5C25576B2324E9ED008CE3F4 /* Resources */,
 			);
@@ -83,7 +99,6 @@
 				5C25577A232519A0008CE3F4 /* EmployeeViewController.swift */,
 				5C25577E2325637E008CE3F4 /* EmployeeTableViewCell.swift */,
 				5C25577C23256316008CE3F4 /* EmployeeComposeViewController.swift */,
-				5C25576C2324EA1C008CE3F4 /* Core */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -113,6 +128,7 @@
 			children = (
 				5C2557652324CEF4008CE3F4 /* CoreDataManager.swift */,
 				5C2557782324F0E7008CE3F4 /* CoreDataManager+Person.swift */,
+				5C163E9B232619C200B469E4 /* CoreDataManager+Employee.swift */,
 				5C2557672324E9B9008CE3F4 /* CoreDatabase.xcdatamodeld */,
 				5C2557722324ECD1008CE3F4 /* Entities */,
 			);
@@ -122,6 +138,7 @@
 		5C2557722324ECD1008CE3F4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				5C163E962326192600B469E4 /* Employee */,
 				5C2557732324ECE7008CE3F4 /* Person */,
 			);
 			path = Entities;
@@ -209,13 +226,16 @@
 			files = (
 				5C2557762324EFAF008CE3F4 /* PersonEntity+CoreDataClass.swift in Sources */,
 				5C2557532324CEE2008CE3F4 /* PersonViewController.swift in Sources */,
+				5C163E9C232619C200B469E4 /* CoreDataManager+Employee.swift in Sources */,
 				5C2557662324CEF4008CE3F4 /* CoreDataManager.swift in Sources */,
 				5C25577F2325637E008CE3F4 /* EmployeeTableViewCell.swift in Sources */,
 				5C2557772324EFAF008CE3F4 /* PersonEntity+CoreDataProperties.swift in Sources */,
+				5C163EA323261DC900B469E4 /* EmployeeEntity+CoreDataClass.swift in Sources */,
 				5C2557512324CEE2008CE3F4 /* AppDelegate.swift in Sources */,
 				5C2557692324E9B9008CE3F4 /* CoreDatabase.xcdatamodeld in Sources */,
 				5C25577B232519A0008CE3F4 /* EmployeeViewController.swift in Sources */,
 				5C25577D23256316008CE3F4 /* EmployeeComposeViewController.swift in Sources */,
+				5C163EA423261DC900B469E4 /* EmployeeEntity+CoreDataProperties.swift in Sources */,
 				5C2557792324F0E7008CE3F4 /* CoreDataManager+Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

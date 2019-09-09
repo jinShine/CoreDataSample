@@ -25,7 +25,7 @@ extension CoreDataManager {
     
     func personRead() -> [PersonEntity] {
         
-        var list = [PersonEntity]()
+      var list: [PersonEntity] = []
         
         //block이 끝날때까지 sync
         context.performAndWait {

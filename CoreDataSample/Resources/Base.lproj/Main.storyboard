@@ -257,6 +257,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="l2Q-lf-RtM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rEA-M2-ocu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -288,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="939" y="885"/>
         </scene>
-        <!--View Controller-->
+        <!--Employee Compose View Controller-->
         <scene sceneID="EHe-TP-ORm">
             <objects>
-                <viewController id="tAL-4l-ciT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeComposeViewController" id="tAL-4l-ciT" customClass="EmployeeComposeViewController" customModule="CoreDataSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hu7-cA-NaH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,6 +363,19 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqt-Wn-vua">
+                                                <rect key="frame" x="30" y="387" width="354" height="50"/>
+                                                <color key="backgroundColor" red="0.27450980390000002" green="0.27450980390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="i3J-gD-0u4"/>
+                                                </constraints>
+                                                <state key="normal" title="저장">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="save:" destination="tAL-4l-ciT" eventType="touchUpInside" id="bVX-Mj-JHL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -383,11 +397,14 @@
                                             <constraint firstItem="FVy-4J-DDk" firstAttribute="leading" secondItem="NNh-9V-mUI" secondAttribute="leading" constant="30" id="N0G-lX-c8W"/>
                                             <constraint firstItem="S8R-CD-UZZ" firstAttribute="leading" secondItem="NNh-9V-mUI" secondAttribute="leading" constant="30" id="Og9-Iz-Hg3"/>
                                             <constraint firstItem="aSX-FV-8DS" firstAttribute="leading" secondItem="NNh-9V-mUI" secondAttribute="leading" constant="30" id="PFe-zZ-UR9"/>
+                                            <constraint firstItem="xqt-Wn-vua" firstAttribute="leading" secondItem="NNh-9V-mUI" secondAttribute="leading" constant="30" id="Qmn-0k-s3x"/>
+                                            <constraint firstItem="xqt-Wn-vua" firstAttribute="top" secondItem="5dO-XK-8s9" secondAttribute="bottom" constant="12" id="RlM-gf-2J9"/>
                                             <constraint firstItem="2Tq-JQ-4Gh" firstAttribute="leading" secondItem="NNh-9V-mUI" secondAttribute="leading" constant="30" id="TEo-BC-Wgv"/>
                                             <constraint firstAttribute="trailing" secondItem="FVy-4J-DDk" secondAttribute="trailing" constant="30" id="Tfu-K5-DOB"/>
                                             <constraint firstItem="5dO-XK-8s9" firstAttribute="top" secondItem="VhR-1F-Htk" secondAttribute="bottom" constant="12" id="gX0-6c-cBo"/>
                                             <constraint firstItem="5dO-XK-8s9" firstAttribute="leading" secondItem="NNh-9V-mUI" secondAttribute="leading" constant="30" id="jAZ-0h-6X0"/>
                                             <constraint firstItem="dOn-Kt-7G5" firstAttribute="top" secondItem="FVy-4J-DDk" secondAttribute="bottom" constant="12" id="lQw-7V-3n0"/>
+                                            <constraint firstAttribute="trailing" secondItem="xqt-Wn-vua" secondAttribute="trailing" constant="30" id="nWM-xW-ged"/>
                                             <constraint firstAttribute="trailing" secondItem="S8R-CD-UZZ" secondAttribute="trailing" constant="30" id="nvf-g9-R5f"/>
                                             <constraint firstAttribute="trailing" secondItem="dOn-Kt-7G5" secondAttribute="trailing" constant="30" id="oiD-qu-ZM5"/>
                                             <constraint firstAttribute="trailing" secondItem="6bm-t9-4hg" secondAttribute="trailing" constant="30" id="q68-wZ-Gfe"/>
@@ -417,6 +434,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ov7-Fr-ki1"/>
                     </view>
+                    <connections>
+                        <outlet property="addressField" destination="dOn-Kt-7G5" id="52J-SH-uNR"/>
+                        <outlet property="ageField" destination="aSX-FV-8DS" id="arp-3g-WUd"/>
+                        <outlet property="departmentField" destination="6bm-t9-4hg" id="g4Y-nE-XbV"/>
+                        <outlet property="nameField" destination="DtB-6m-gwt" id="0vX-0K-R1g"/>
+                        <outlet property="salaryField" destination="5dO-XK-8s9" id="esR-L3-GzR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdJ-K2-fpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
