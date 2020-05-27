@@ -1,3 +1,3 @@
 # CoreDataSample
 
-CoreData Sample Project of 's Using Simple CRUD
+CoreData Sample Project Using CRUD
